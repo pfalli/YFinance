@@ -18,26 +18,6 @@ This project fetches historical Apple (AAPL) stock data, performs feature engine
 *   **PyTorch:** For building and training the LSTM neural network.
 *   **SQLite:** As the database to store stock data and features.
 
-## Setup and Installation
-
-1.  **Clone the repository (if applicable):**
-    ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
-    ```
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    # On Windows
-    .\venv\Scripts\activate
-    # On macOS/Linux
-    source venv/bin/activate
-    ```
-3.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Project Workflow & Usage
 
 The project consists of several scripts that should ideally be run in order:
@@ -49,16 +29,6 @@ The project consists of several scripts that should ideally be run in order:
 5.  **`5_predict_price_direction.py`**: Trains a Random Forest Classifier to predict whether the stock price will go *up or down* the next day based on the features. It prints a classification report and confusion matrix. It also trains a simple Linear Regression model for comparison and prints its RMSE and R² score.
 6.  **`6_lstm_prediction.py`**: Implements an LSTM (Long Short-Term Memory) neural network using PyTorch to predict the *next day's closing price*. It preprocesses the data into sequences, trains the model, evaluates it using RMSE and R² score, and saves a plot comparing actual vs. predicted prices (`plots/lstm_predicted_vs_actual.png`).
 
-**To run the full pipeline:**
-
-```bash
-python 1_create_database.py
-python 2_calculate_features.py
-python 3_create_plots.py
-python 4_prediction_model.py
-python 5_predict_price_direction.py
-python 6_lstm_prediction.py
-```
 
 ## Outputs ##
 
