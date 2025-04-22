@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+numpy
+scikit-learn
+matplotlib
+torch
+torchvision
